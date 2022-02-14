@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import UserList from "./components/User";
 import ToDoList from "./components/ToDo";
 import {ProjectDetail, ProjectList} from "./components/Project";
+import LoginForm from "./components/Auth";
 
 
 const DOMAIN = 'http://127.0.0.1:8000'
@@ -64,6 +65,8 @@ class App extends React.Component {
                             <Route path='/projects' element={<ProjectList items={this.state.projects} />} />
 
                             <Route path='/todos' element={<ToDoList items={this.state.todos} />} />
+
+                            <Route path='/login' element={<LoginForm />} />
                         </Routes>
                       </div>
                   </main>
