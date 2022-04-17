@@ -1,11 +1,26 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 
-const Menu = () => {
+function NavbarItem({name, href}) {
     return (
-        <div> Menu </div>
+        <li>
+          <Link to={href}>{name}</Link>
+        </li>
     )
 }
 
 
-export default Menu
+function Navbar({navbarItems}) {
+    return (
+        <nav>
+            <ul>
+                <li>
+                  {navbarItems.map((item) => <NavbarItem name={item.name} href={item.href} />)}
+                </li>
+            </ul>
+        </nav>
+    )
+}
+
+export default Navbar
